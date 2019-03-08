@@ -97,7 +97,7 @@ def main():
                         default=False, help='List phone numbers')
     parser.add_argument('-j', '--json', action='store_true',
                         default=False, help='Json output')
-    parser.add_argument('-t', '--timeout',
+    parser.add_argument('-t', '--timeout', type=int,
                         default=REQUESTS_TIMEOUT, help='Request timeout')
     args = parser.parse_args()
     client = FidoClient(args.username, args.password, args.timeout)
